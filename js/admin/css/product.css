@@ -1,0 +1,28 @@
+.product-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+#product_list{
+    text-align: center;
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.imageUploadContainer{
+    text-align: center;
+}
+
+#product_img{
+    display: none;
+}
+
+#imageUploadInputBtn{
+    display: inline-block;
+    padding: 7.5px 15px;
+    background-color: #0099cc;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+}

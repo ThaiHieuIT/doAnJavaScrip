@@ -1,0 +1,433 @@
+:root {
+    --primary-color: #E97777;
+    --bodycolor: #FF9F9F;
+}
+
+/* Header */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+.wrap{
+    max-width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    min-height: 100%;
+    position: relative;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+
+}
+/* Header */
+.header{
+    min-width: 100%;
+    height: 80px;
+    background-color: #52ab98;
+    display: flex;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    align-items: center;
+}
+/* Logo */
+.imglogo{
+    position: relative;
+    height: 80px;
+    width: 11%;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    margin-left: 27px;
+}
+
+.imglogo  a{
+    height: 100%;
+}
+.imglogo a img {
+    height: 100%;
+    width: 159px;
+}
+
+/* Danh Mục */
+.Category{
+    width: 15%;
+    height: 64px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.Category>.category-list{
+    width: 60%;
+    position: absolute;
+    height: 80px;
+    line-height: 80px;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+}
+.Category .sub-category .sub-category-item {
+    height: 52px;
+    display: flex;
+    align-items: center;
+    color: #999;
+    padding-left: 10px;
+}
+.Category .category-list a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+.Category .category-list:hover .sub-category{
+    display: block;
+}
+/* Danh Mục Con */
+.Category .sub-category{
+    display: none;
+    width: 250px;
+    background-color: #fff;
+    border-radius: 2px;
+    list-style: none;
+    position: absolute;
+    text-align: start;
+    z-index: 4;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.Category .sub-category .sub-category-item a{
+    padding-right: 86px;
+    padding-left: 8px;
+    color: #000;
+}
+.Category .sub-category-item:hover{
+    background-color: #ee4d2d;
+}
+
+.Category .sub-category-item:hover a,.caret-right{
+    color: #fff;
+}
+.caret-right {
+    display: none;
+}
+.Category .sub-category-item:hover .caret-right {
+    display: inline-block;
+}
+
+/* Tìm Kiếm */
+.search{
+    width: 48%;
+    position: relative;
+    margin-left: -5px;
+}
+
+.search input{
+    width: 100%;
+    padding-left: 10px;
+    height: 42px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-weight: 400;
+}
+.icon-seach {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.btn-search{
+    position: absolute;
+    width: 60px;
+    border: none;
+    outline: none;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 16px;
+    background-color:#fb5533;
+}
+
+.btn-search:hover {
+    opacity: 0.9;
+}
+.btn-search:active {
+    background-color: #ee1730;
+}
+/* Giỏ hàng */
+
+.btn-admin{
+    width: 80px;
+    height: 40px;
+    margin-left: 20px;
+}
+.btn-admin a{
+    color: #000;
+}
+.btn-admin a:hover{
+    text-decoration: none;
+}
+.user{
+    width: 18%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+  
+}
+.user .login, .signup{
+    width: 80px;
+    height: 40px;
+    margin-left: 20px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    border: none;
+    
+}
+.user .login:active {
+    background-color: #ee1730;
+}
+.user .signup:active {
+    background-color: #ee1730;
+}
+.user .login a, .signup a{
+    text-decoration: none;
+    color: #D70018;
+    
+}
+
+/* content */
+.formheader ul li {
+    display: inline-block;
+    margin: 0 30px;
+}
+
+.btn {
+    width: 100%;
+    background-color: var(--primary-color);
+    height: 36px;
+    font-weight: 600;
+    color: #fff;
+}
+.btn:hover {
+    background-color: red;
+    color: #fff;
+}
+
+#product_list{
+    height: 398px;
+    overflow: scroll;
+}
+.product-img {
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+}
+
+.product-item {
+    position: relative;
+    margin-top: 10px;
+}
+
+.product-info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-name {
+    background-color: rgba(0, 125, 110, 0.4);
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.product-price {
+    background-color: rgba(0, 125, 110, 0.5);
+    color: #fff;
+    text-align: right;
+    border-radius: 10px;
+
+}
+
+.product-price-wrap {
+    text-align: right;
+}
+
+.product-item:hover .product-img {
+    transform: scale(1.1);
+    transform: 0.2s linear;
+}
+
+.product-item:hover {
+    cursor: pointer;
+}
+
+
+
+.formheader {
+    height: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+}
+
+.soluong {
+    height: 20px;
+    font-size: 10px;
+    color: #fff;
+    background-color: gray;
+    margin-top: 5px;
+}
+
+.notelist {
+    background-color: #f7da9c;
+}
+
+.formbody {
+    background-color: #2b6777;
+    border-bottom: 2px dotted #9c9c9c;
+    padding: 0;
+    height: 382px;
+    overflow: scroll;
+    color: #fff;
+}
+
+.datetime {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.info-item {
+    margin-bottom: 15px;
+}
+
+.grandopening {
+    width: 60%;
+    height: 35px;
+    float: left;
+}
+
+.money {
+    width: 40%;
+    height: 35px;
+    float: right;
+}
+
+.donhang {
+    width: 100%;
+    margin-bottom: 5px;
+    height: 35px;
+}
+
+.note {
+    width: 100%;
+}
+
+.fa-trash{
+    cursor: pointer;
+}
+/* PAY RIGHT */
+
+
+.order{
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.col-md-5 .btn-food,.col-md-5 .btn-drink{
+    background-color: #52ab98;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+.col-md-5 .btn-food:hover,.col-md-5 .btn-drink:hover{
+    background-color: red;
+
+}
+
+.bottom{
+    width: 100%;
+    height: 200px;
+    margin: 26px 0;
+    background-color: #52ab98;
+}
+
+/* Bottom */
+
+.input-info{
+    display: flex;
+    height: 100%;
+    margin: 0 16px;
+}
+
+.input-info-left{
+    width: 30%;
+    margin-right: 20px;
+}
+
+.input-info-center{
+    width: 25%;
+}
+.info-bottom-left, .info-bottom-Between, .info-bottom-right{
+    display: flex;
+}
+.info-bottom-left button, .info-bottom-Between button, .info-bottom-right button{
+    width: 100%;
+    margin: 10px 20px;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    border-radius: 10px;
+}
+.info-bottom-left button:hover, .info-bottom-Between button:hover, .info-bottom-right button:hover{
+    background-color: #2b6777;
+    color: #fff;
+    font-weight: 700;
+}
+
+.info-bottom-left, .info-bottom-Between{
+    height: 30%;
+}
+.info-bottom-right{
+    height: 40%;
+}
+.input-info-right{
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.total-money, .discount, .tax, .sum-total, .money-user, .money-superfluous{
+    width: 100%;
+    display: flex;
+    height: 16%;
+}
+.info-name, .tax-left, .tax-right{
+    width: 50%;
+}
+
+.tax-left button, .tax-right button , .totall{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+.up{
+    font-size: 15px;
+}
